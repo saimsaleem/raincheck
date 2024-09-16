@@ -1,0 +1,86 @@
+.Home {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex-direction: row;
+  position: relative;
+}
+
+.Home-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.get-started-btn {
+  padding: 10px 40px;
+  background-color: darkseagreen;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.get-started-btn:hover {
+  opacity: 85%;
+}
+
+.Home .content {
+  margin-left: 68vh;
+  animation: appearFromAbove 2s forwards;
+}
+
+@keyframes appearFromAbove {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.Home-animate {
+  animation: moveToLeft 2s forwards;
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+  
+}
+
+.login-signup-panel {
+  position: relative;
+  height: 100vh;
+  transform: translateX(10%);
+  transition: transform 2s ease;
+  visibility: hidden;
+}
+
+.login-signup-panel-show {
+  visibility: visible;
+  transform: translateX(-30%);
+  animation: appear 3s ease;
+}
+
+.login-comp{
+  padding-top: 17vh;
+}
